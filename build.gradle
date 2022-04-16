@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'testautomation'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    testImplementation 'io.rest-assured:rest-assured:5.0.1'
+    testImplementation 'io.rest-assured:json-path:5.0.1'
+    testImplementation 'com.thedeanda:lorem:2.1'
+
+
+}
+
+test {
+    useTestNG();
+}
