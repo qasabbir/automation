@@ -10,10 +10,9 @@ import static org.hamcrest.Matchers.hasItems;
 
 public class singleUser extends baseClass{
     @Test
-    public void singleUser(){
+    public void singleUsers(){
         given()
                 .when()
-//            .log().uri()
                 .header("Content-Type", "application/json")
                 .accept(ContentType.JSON)
                 .get("/users/2")
@@ -37,7 +36,6 @@ public class singleUser extends baseClass{
 
                     given()
                             .when()
-            //            .log().uri()
                             .header("Content-Type", "application/json")
                             .accept(ContentType.JSON)
                             .get("/users/{userId}",userId)
