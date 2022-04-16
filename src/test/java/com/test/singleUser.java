@@ -13,7 +13,6 @@ public class singleUser extends baseClass{
     public void singleUsers(){
         given()
                 .when()
-//            .log().uri()
                 .header("Content-Type", "application/json")
                 .accept(ContentType.JSON)
                 .get("/users/2")
